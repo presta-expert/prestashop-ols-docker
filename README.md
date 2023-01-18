@@ -1,7 +1,5 @@
 # README
 
-In development... may be currently unusable.
-
 Docker image of OpenLiteSpeed server with Prestashop and ionCube installed _(appropriate for the given php version)._
 
 ## Arguments
@@ -9,27 +7,15 @@ Docker image of OpenLiteSpeed server with Prestashop and ionCube installed _(app
 ### Build arguments
 You can specify a few helpful arguments when building an image.
 
-| **Argument**  | **Description**                      | **Default** |
-|---------------|--------------------------------------|-------------|
-| _OLS_VERSION_ | Version of OpenLiteSpeed to use      | _1.7.16_    |
-| _PHP_VERSION_ | Version of PHP to use (without dot)  | _74_        |
+| **Argument**         | **Description**                     | **Default** |
+|----------------------|-------------------------------------|-------------|
+| _OLS_VERSION_        | Version of OpenLiteSpeed to use     | _1.7.16_    |
+| _PHP_VERSION_        | Version of PHP to use (without dot) | _74_        |
+| _PRESTASHOP_VERSION_ | Version of Prestashop to run        | _1.7.8.8_   |
 
 **Example:**
 ```bash
 docker build -t [target-name] --build-arg OLS_VERSION="1.7.16" --build-arg PHP_VERSION="81" src/
-```
-
-### Environment arguments
-
-You can specify below environment arguments when running an image.
-
-| **Argument**         | **Description**                     | **Default** |
-|----------------------|-------------------------------------|-------------|
-| _PRESTASHOP_VERSION_ | Version of Prestashop to run        | _1.7.8.8_   |
-
-**Examples:**
-```bash
-docker run --name [container-name] -e "PRESTASHOP_VERSION=8.0.1" -d [target-name]
 ```
 
 ### Prestashop PHP compatibility chart
